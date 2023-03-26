@@ -5,16 +5,15 @@
 #include <stdarg.h>
 
 /**
-struct s_printf - defines a structure for symbols and functions
-*
-* @spec_c: The operator
-* @func: The function associated
-*/
+ * struct s_printf - defines a structure for symbols and functions
+ * @spe_c: The operator
+ * @func: The function associated
+ */
 
 typedef struct s_printf
 {
-    char *spe_c;
-    int (*func)(va_list);
+	char *spe_c;
+	int (*func)(va_list);
 } s_printf;
 
 int _printf(const char *format, ...);
@@ -29,10 +28,4 @@ int _write_char(char);
 
 int select_f(const char *format, s_printf func_arr[], va_list arg_list);
 
-
-
-
-
-
-
-#endif /* MAIN_H */
+#endif
