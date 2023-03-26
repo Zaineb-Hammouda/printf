@@ -51,7 +51,7 @@ int print_percent(__attribute__((unused))va_list arg_list)
  */
 int print_num(long int n)
 {
-	long int len = 0;
+	int len = 0;
 
 	if (n < 0)
 	{
@@ -75,7 +75,7 @@ int print_num(long int n)
 int print_int(va_list arg_list)
 {
 	long int n;
-	long int len = 0;
+	int len = 0;
 
 	n = va_arg(arg_list, int);
 	len = print_num(n);

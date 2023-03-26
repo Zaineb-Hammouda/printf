@@ -19,7 +19,7 @@ typedef struct s_printf
 int _printf(const char *format, ...);
 
 int print_char(va_list);
-int print_num(int n);
+int print_num(long int n);
 int print_int(va_list);
 int print_str(va_list);
 int print_percent(va_list);
