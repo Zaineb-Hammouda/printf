@@ -17,13 +17,19 @@ _printf: a function that prints formatted text to the standard output stream.
 - %i: Prints integers.
 - %b: Prints the binary representation of an unsigned decimal.
 - %u: Prints unsigned integers
-%x: Prints the hexadecial representation of an unsigned decimal in lowercase letters
-%X:Prints the hexadecial representation of an unsigned decimal in uppercase letters
-%r: Prints a reversed string
-%R: Prints the Rot13 interpretation of a string.
-%p: prints address.
+- %x: Prints the hexadecial representation of an unsigned decimal in lowercase letters
+- %X:Prints the hexadecial representation of an unsigned decimal in uppercase letters
+- %r: Prints a reversed string
+- %R: Prints the Rot13 interpretation of a string.
+- %p: prints address.
+
+### Usage
+
+* All the files are to be compiled on Ubuntu 14.04 LTS
+* Compile your code with gcc -Wall -Werror -Wextra -pedantic *.c
+* Include the "main.h" header file on the functions using the _printf()
 
 ## Authors
 
-- Zaineb Hammouda
+- [Zaineb Hammouda](https://github.com/Zaineb-Hammouda)
 - Sirine Romdhani
