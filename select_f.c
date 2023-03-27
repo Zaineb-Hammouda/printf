@@ -28,6 +28,17 @@ int select_f(const char *format, s_printf func_arr[], va_list arg_list)
 					break;
 				}
 			}
+			if (func_arr[j].spe_c == NULL && format[i + 1] != ' ')
+			{
+				if (format[i + 1] != '\0')
+				{
+					_write_char(format[i]);
+					_write_char(format[i + 1]);
+					printed_c = printed_c + 2;
+				}
+				else
+					return (-1);
+			}
 			i++;
 		}
 		else
