@@ -8,6 +8,7 @@
 int _printf(const char *format, ...)
 {
 	int printed_chars;
+
 	s_printf func_arr[] = {
 		{"c", print_char},
 		{"s", print_str},

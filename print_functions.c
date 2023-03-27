@@ -45,39 +45,16 @@ int print_percent(__attribute__((unused))va_list arg_list)
 }
 
 /**
- * print_num - prints a number to stdout
- * @n: number to print
- * Return: length of number
- */
-int print_num(long int n)
-{
-	int len = 0;
-
-	if (n < 0)
-	{
-		len += _write_char('-');
-		n = n * -1;
-	}
-	if (n / 10)
-	{
-		print_num(n / 10);
-	}
-	_write_char(n % 10 + '0');
-	len++;
-	return (len);
-}
-
-/**
  * print_int - calls print num function
  * @arg_list: list of arguments sent to printf
  * Return: length of a number
  */
+
 int print_int(va_list arg_list)
 {
-	long int n;
-	int len = 0;
+	int len;
 
-	n = va_arg(arg_list, int);
-	len = print_num(n);
+	len = print_num(arg_list);
 	return (len);
 }
+

@@ -21,7 +21,7 @@ int _printf(const char *format, ...);
 int select_f(const char *format, s_printf func_arr[], va_list arg_list);
 
 int print_char(va_list);
-int print_num(long int n);
+int print_num(va_list);
 int print_int(va_list);
 int print_str(va_list);
 int print_percent(va_list);
