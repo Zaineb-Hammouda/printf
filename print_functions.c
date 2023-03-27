@@ -58,3 +58,22 @@ int print_int(va_list arg_list)
 	return (len);
 }
 
+
+/**
+ * unsigned_integer - Prints Unsigned integers
+ * @arg_list: List of all of the argumets
+ * Return: a count of the numbers
+ */
+int unsigned_integer(va_list arg_list)
+{
+	unsigned int num;
+
+	num = va_arg(arg_list, unsigned int);
+
+	if (num == 0)
+		return (print_unsgined_number(num));
+
+	if (num < 1)
+		return (-1);
+	return (print_unsgined_number(num));
+}
