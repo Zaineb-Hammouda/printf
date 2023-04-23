@@ -25,32 +25,32 @@ int print_reversed(va_list arg_list)
 }
 
 /**
- * rot13 - Converts string to rot13
+ * rot13 - rotates string of letters by 13 chars
  * @arg_list: string to convert
  * Return: converted string
  */
 int rot13(va_list arg_list)
 {
 	int i;
-	int x;
+	int y;
 	char *str;
 	char s[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char u[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	char rot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 	str = va_arg(arg_list, char *);
 	if (str == NULL)
 		return (-1);
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		for (x = 0; x <= 52; x++)
+		for (y = 0; y <= 52; y++)
 		{
-			if (str[i] == s[x])
+			if (str[i] == s[y])
 			{
-				_write_char(u[x]);
+				_write_char(rot[y]);
 				break;
 			}
 		}
-		if (x == 53)
+		if (y == 53)
 			_write_char(str[i]);
 	}
 	return (i);
